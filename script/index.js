@@ -1,14 +1,15 @@
-var pacman = document.querySelector('#pacman');
-var wall = document.querySelector('.verti-1');
+let pacman = document.querySelector('#pacman');
 let pacman_Animation = ['url(img/Pacman-1.png)', 'url(img/Pacman-2.png)', 'url(img/Pacman-3.png)']
-let leftPos = 430;
-var topPos = 350;
+let leftPos = 506;
+var topPos = 370;
 let i=1;
 var speed = 6;
-let wall = document.querySelectorAll(".verticals");
 let b=false;
 
+let horizontalBoundary = document.querySelectorAll('.horizontal-line');
+let verticalBoundary = document.querySelectorAll('.vertical-line');
 
+console.log(horizontalBoundary[1].offsetTop);
 
 setInterval(PacManAnimation, 115);
 function PacManAnimation()
@@ -20,59 +21,42 @@ function PacManAnimation()
 }
 
 window.addEventListener("keypress", function(event){
-    console.log(leftPos);
-    console.log("wall: " + wall[0].style.left);
+    console.log(topPos);
     if(event.key === "d")
     {
-        if(parseInt(pacman.style.left) >= 900)
+        if(leftPos > parseInt(verticalBoundary[1].offsetLeft)-40)
         {
-            leftPos = -20;
-        }
-        pacman.style.transform = "rotate(0deg)";
-        leftPos = leftPos + speed;
-        for(let j=0;j<wall.length;j++)
-        {
-            if(leftPos===parseInt(wall[i].offsetLeft))
-            {
-                alert("Blah");
-                b=true;
-            }
-        }
-        if(b === false)
-        {
+            pacman.style.transform = "rotate(0deg)";
+            leftPos = leftPos + speed;
             pacman.style.left = leftPos + "px";
         }
     }
     if(event.key === "a")
     {
-        if(parseInt(pacman.style.left) < -20)
+        if(leftPos < parseInt(verticalBoundary[0].offsetLeft)+40)
         {
-            leftPos = 900;
+            pacman.style.transform = "rotate(180deg)";
+            leftPos = leftPos - speed;
+            pacman.style.left = leftPos + "px";
         }
-        pacman.style.transform = "rotate(180deg)";
-        leftPos = leftPos - speed;
-        pacman.style.left = leftPos + "px";
     }
     if(event.key === "w")
     {
-        if(parseInt(pacman.style.top) < -15)
+        if(topPos > parseInt(horizontalBoundary[0].offsetTop)+30)
         {
-            topPos = 580;
+            pacman.style.transform = "rotate(-90deg)";
+            topPos = topPos - speed;
+            pacman.style.top = topPos + "px";
         }
-        pacman.style.transform = "rotate(-90deg)";
-        topPos = topPos - speed;
-        pacman.style.top = topPos + "px";
     }
     if(event.key === "s")
     {
-        if(parseInt(pacman.style.top) >= 590)
+        if(topPos < parseInt(horizontalBoundary[1].offsetTop)-60)
         {
-            topPos = -20;
+            pacman.style.transform = "rotate(90deg)";
+            topPos = topPos + speed;
+            pacman.style.top = topPos + "px";
         }
-        // console.log(pacman.style.top);
-        pacman.style.transform = "rotate(90deg)";
-        topPos = topPos + speed;
-        pacman.style.top = topPos + "px";
     }
-    
 });
+
