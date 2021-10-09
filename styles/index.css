@@ -20,8 +20,8 @@
 
 #pacman{
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 100px;
+    top: 70px;
     background: url(../img/Pacman-2.png);
     height: 48px;
     width: 45px;
@@ -133,22 +133,22 @@
 }
 .hori-8{
     top: 38%;
-    left: 20%;
+    left: 18%;
     width: 8%;
 }
 .hori-9{
     top: 38%;
-    right: 20%;
+    right: 18%;
     width: 8%;
 }
 .hori-10{
     bottom: 35%;
-    left: 20%;
+    left: 18%;
     width: 8%;
 }
 .hori-11{
     bottom: 35%;
-    right: 20%;
+    right: 18%;
     width: 8%;
 }
 .hori-12{

@@ -1,9 +1,12 @@
-let pacman = document.querySelector('#pacman');
+var pacman = document.querySelector('#pacman');
+var wall = document.querySelector('.verti-1');
 let pacman_Animation = ['url(img/Pacman-1.png)', 'url(img/Pacman-2.png)', 'url(img/Pacman-3.png)']
-var leftPos = 10;
-var topPos = 10;
+var leftPos = 100;
+var topPos = 70;
 let i=1;
 var speed = 6;
+
+setInterval(collide,10)
 
 setInterval(PacManAnimation, 115);
 function PacManAnimation()
@@ -39,4 +42,12 @@ window.addEventListener("keypress", function(event){
         topPos = topPos + speed;
         pacman.style.top = topPos + "px";
     }
+    
 });
+function collide(){
+    let pacpos = pacman.getBoundingClientRect();
+    let wallpos = wall.getBoundingClientRect();
+    if(pacpos===wallpos){
+        alert("dont");
+    }
+}
