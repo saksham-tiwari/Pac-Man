@@ -1,0 +1,11 @@
+.block{
+    width: 70vw;
+    height: 80vh;
+    margin: 4rem auto;
+    box-shadow: 1px 10px 50px rgba(0, 0, 0, 0.5);
+    background-image: url(../img/Background.png);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
