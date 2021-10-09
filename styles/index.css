@@ -18,7 +18,10 @@
 }
 
 #pacman{
-    background: url(../img/Pacman.svg);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: url(../img/Pacman-2.png);
     height: 64px;
     width: 60px;
     background-position: center;
