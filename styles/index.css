@@ -20,8 +20,8 @@
 
 #pacman{
     position: absolute;
-    left: 47%;
-    top: 65%;
+    left: 430px;
+    top: 350px;
     background: url(../img/Pacman-2.png);
     height: 48px;
     width: 45px;

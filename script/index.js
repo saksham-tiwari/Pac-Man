@@ -1,12 +1,11 @@
 var pacman = document.querySelector('#pacman');
 var wall = document.querySelector('.verti-1');
 let pacman_Animation = ['url(img/Pacman-1.png)', 'url(img/Pacman-2.png)', 'url(img/Pacman-3.png)']
-let leftPos = 506;
-var topPos = 370;
+let leftPos = 430;
+var topPos = 350;
 let i=1;
 var speed = 6;
 
-setInterval(collide,10)
 
 setInterval(PacManAnimation, 115);
 function PacManAnimation()
@@ -20,9 +19,9 @@ function PacManAnimation()
 window.addEventListener("keypress", function(event){
     if(event.key === "d")
     {
-        if(parseInt(pacman.style.left) >= 1100)
+        if(parseInt(pacman.style.left) >= 900)
         {
-            leftPos = -15;
+            leftPos = -20;
         }
         pacman.style.transform = "rotate(0deg)";
         leftPos = leftPos + speed;
@@ -32,7 +31,7 @@ window.addEventListener("keypress", function(event){
     {
         if(parseInt(pacman.style.left) < -20)
         {
-            leftPos = 1080;
+            leftPos = 900;
         }
         pacman.style.transform = "rotate(180deg)";
         leftPos = leftPos - speed;
@@ -61,10 +60,3 @@ window.addEventListener("keypress", function(event){
     }
     
 });
-function collide(){
-    let pacpos = pacman.getBoundingClientRect();
-    let wallpos = wall.getBoundingClientRect();
-    if(pacpos===wallpos){
-        alert("dont");
-    }
-}
