@@ -17,6 +17,7 @@
 }
 
 #pacman{
+    z-index: 1;
     position: absolute;
     left: 430px;
     top: 350px;
@@ -29,6 +30,7 @@
 }
 
 .vertical-line{
+    z-index: 1;
     position: absolute;
 }
 
@@ -40,6 +42,7 @@
 }
 
 .horizontal-line{
+    z-index: 1;
     position: absolute;
     display: flex;
 }
