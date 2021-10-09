@@ -4,6 +4,9 @@ let leftPos = 506;
 var topPos = 370;
 let i=1;
 var speed = 6;
+let wall = document.querySelectorAll(".verticals");
+let b=false;
+
 
 setInterval(PacManAnimation, 115);
 function PacManAnimation()
@@ -15,6 +18,8 @@ function PacManAnimation()
 }
 
 window.addEventListener("keypress", function(event){
+    console.log(leftPos);
+    console.log("wall: " + wall[0].style.left);
     if(event.key === "d")
     {
         if(parseInt(pacman.style.left) >= 1100)
@@ -23,7 +28,18 @@ window.addEventListener("keypress", function(event){
         }
         pacman.style.transform = "rotate(0deg)";
         leftPos = leftPos + speed;
-        pacman.style.left = leftPos + "px";
+        for(let j=0;j<wall.length;j++)
+        {
+            if(leftPos===parseInt(wall[i].offsetLeft))
+            {
+                alert("Blah");
+                b=true;
+            }
+        }
+        if(b === false)
+        {
+            pacman.style.left = leftPos + "px";
+        }
     }
     if(event.key === "a")
     {
@@ -51,7 +67,7 @@ window.addEventListener("keypress", function(event){
         {
             topPos = -20;
         }
-        console.log(pacman.style.top);
+        // console.log(pacman.style.top);
         pacman.style.transform = "rotate(90deg)";
         topPos = topPos + speed;
         pacman.style.top = topPos + "px";

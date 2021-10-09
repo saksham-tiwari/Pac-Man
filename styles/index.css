@@ -65,7 +65,16 @@
 }
 .verti-1{
     top: 3.25%;
-    left: 22.75%;
+    left: 22.75px;
+    border: 2px solid white;
+}
+#jhj{
+    height: 50px;
+    width: 50px;
+    display: inline;
+    background-image: url(../img/Platforms/Platform_Vertical_Pink.png);
+    top: 123.25px;
+    left: 524px;
 }
 .verti-2{
     right: 22.75%;
