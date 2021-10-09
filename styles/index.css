@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    font-family: Bahnschrift, Montserrat, sans-serif;
+}
+
+#pacman{
+    background: url(../img/Pacman.svg);
+    height: 64px;
+    width: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
