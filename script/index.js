@@ -15,6 +15,7 @@ let b=false;
 let horizontalBoundary = document.querySelectorAll('.horizontal-line');
 let verticalBoundary = document.querySelectorAll('.vertical-line');
 
+let i=1;
 
 console.log(horizontalBoundary[2].offsetTop);
 setTimeout(ghosts, 10);
