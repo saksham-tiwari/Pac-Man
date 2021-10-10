@@ -204,9 +204,9 @@ function ghosts(){
                                 gh_top = gh_top + speedG;
                                 gh.style.top = gh_top + "px";
                             }
-                            else{
-                                n[j]=Math.ceil((Math.random()*4));
-                            }
+                            // else{
+                            //     n[j]=Math.ceil((Math.random()*4));
+                            // }
                         }
                         else if(gh_left > parseInt(horizontalBoundary[6].offsetLeft)-60 && gh_left < parseInt(horizontalBoundary[6].offsetLeft+200))
                         {
@@ -215,9 +215,9 @@ function ghosts(){
                                 gh_top = gh_top + speedG;
                                 gh.style.top = gh_top + "px";
                             }
-                            else{
-                                n[j]=Math.ceil((Math.random()*4));
-                            }
+                            // else{
+                            //     n[j]=Math.ceil((Math.random()*4));
+                            // }
                         }
                         else if(gh_left > parseInt(horizontalBoundary[7].offsetLeft) && gh_left < parseInt(horizontalBoundary[7].offsetLeft+200))
                         {
@@ -226,9 +226,9 @@ function ghosts(){
                                 gh_top = gh_top + speedG;
                                 gh.style.top = gh_top + "px";
                             }
-                            else{
-                                n[j]=Math.ceil((Math.random()*4));
-                            }
+                            // else{
+                            //     n[j]=Math.ceil((Math.random()*4));
+                            // }
                         }
                         else if(gh_top > parseInt(horizontalBoundary[2].offsetTop)+30)
                         {
@@ -288,9 +288,9 @@ function ghosts(){
                                 gh.style.top = gh_top + "px";
                                 console.log("Blah 1-1");
                             }
-                            else{
-                                n[j]=Math.ceil((Math.random()*4));
-                            }
+                            // else{
+                            //     n[j]=Math.ceil((Math.random()*4));
+                            // }
                         }
                         else if(gh_top < parseInt(horizontalBoundary[3].offsetTop)-60)
                         {
