@@ -1,7 +1,7 @@
 .block{
-    margin-left: 8%;
-    width: 1260px;
-    height: 700px;
+    margin-left: 14%;
+    width: 70vw;
+    height: 85vh;
     box-shadow: 1px 10px 50px rgba(0, 0, 0, 0.5);
     background-image: url(../img/Background.png);
     background-position: center;
@@ -19,8 +19,8 @@
 #pacman{
     z-index: 1;
     position: absolute;
-    left: 605px;
-    top: 520px;
+    left: 49%;
+    top: 72%;
     background: url(../img/Pacman-2.png);
     height: 48px;
     width: 45px;
