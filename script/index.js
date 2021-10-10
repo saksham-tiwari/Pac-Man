@@ -5,17 +5,16 @@ let pinky = document.createElement("div");
 let inky = document.createElement("div");
 let clyde = document.createElement("div");
 
-let leftPos = 430;
-var topPos = 370;
+// let leftPos = 430;
+// var topPos = 370;
 let i=1;
-var speed = 6;
+// var speed = 6;
 var speedG = 5;
 let b=false;
 
-let horizontalBoundary = document.querySelectorAll('.horizontal-line');
-let verticalBoundary = document.querySelectorAll('.vertical-line');
+// let horizontalBoundary = document.querySelectorAll('.horizontal-line');
+// let verticalBoundary = document.querySelectorAll('.vertical-line');
 
-let i=1;
 
 console.log(horizontalBoundary[2].offsetTop);
 setTimeout(ghosts, 10);
@@ -28,97 +27,97 @@ function PacManAnimation()
     pacman.style.backgroundImage = pacman_Animation[i];    
 }
 
-window.addEventListener("keypress", function(event){
-    console.log(topPos);
-    if(event.key == "d")
-    {
-        pacman.style.transform = "rotate(0deg)";
-        if(topPos > parseInt(verticalBoundary[2].offsetTop) && topPos < parseInt(verticalBoundary[2].offsetTop + 310))
-        {
-            if(leftPos < parseInt(verticalBoundary[2].offsetLeft)-60)
-            {
-                leftPos = leftPos + speed;
-                pacman.style.left = leftPos + "px";
-            }
-            if(leftPos < parseInt(verticalBoundary[3].offsetLeft)-60)
-            {
-                leftPos = leftPos + speed;
-                pacman.style.left = leftPos + "px";
-            }
-        }
-        else if(leftPos < parseInt(verticalBoundary[1].offsetLeft)-30)
-        {
-            leftPos = leftPos + speed;
-            pacman.style.left = leftPos + "px";
-        }
-    }
-    if(event.key == "a")
-    {
-        pacman.style.transform = "rotate(180deg)";
-        if(topPos > parseInt(verticalBoundary[2].offsetTop) && topPos < parseInt(verticalBoundary[2].offsetTop + 310))
-        {
-            if(leftPos > parseInt(verticalBoundary[2].offsetLeft)+30)
-            {
-                leftPos = leftPos - speed;
-                pacman.style.left = leftPos + "px";
-            }
-            if(leftPos > parseInt(verticalBoundary[3].offsetLeft)-60)
-            {
-                leftPos = leftPos + speed;
-                pacman.style.left = leftPos + "px";
-            }
-}
-        else if(leftPos > parseInt(verticalBoundary[0].offsetLeft)+40)
-        {
-            leftPos = leftPos - speed;
-            pacman.style.left = leftPos + "px";
-        }
-    }
-    if(event.key == "w")
-    {
-        pacman.style.transform = "rotate(-90deg)";
-        if(leftPos > parseInt(horizontalBoundary[2].offsetLeft) && leftPos < parseInt(horizontalBoundary[2].offsetLeft+910))
-        {
-            if(topPos > parseInt(horizontalBoundary[2].offsetTop)+30)
-            {
-                topPos = topPos - speed;
-                pacman.style.top = topPos + "px";
-            }
-            if(topPos > parseInt(horizontalBoundary[3].offsetTop))
-            {
-                topPos = topPos + speed;
-                pacman.style.top = topPos + "px";
-            }
-}
-        else if(topPos > parseInt(horizontalBoundary[0].offsetTop)+30)
-        {
-            topPos = topPos - speed;
-            pacman.style.top = topPos + "px";
-        }
-    }
-    if(event.key == "s")
-    {
-        pacman.style.transform = "rotate(90deg)";
-        if(leftPos > parseInt(horizontalBoundary[3].offsetLeft-10) && leftPos < parseInt(horizontalBoundary[3].offsetLeft+910))
-        {
-            if(topPos < parseInt(horizontalBoundary[3].offsetTop)-60)
-            {
-                topPos = topPos + speed;
-                pacman.style.top = topPos + "px";
-            }
-            if(topPos < parseInt(horizontalBoundary[2].offsetTop))
-            {
-                topPos = topPos - speed;
-                pacman.style.top = topPos + "px";
-            }
-        }
-        else if(topPos < parseInt(horizontalBoundary[1].offsetTop)-60)
-        {
-            topPos = topPos + speed;
-            pacman.style.top = topPos + "px";
-        }
-    }
-});
+// window.addEventListener("keypress", function(event){
+//     console.log(topPos);
+//     if(event.key == "d")
+//     {
+//         pacman.style.transform = "rotate(0deg)";
+//         if(topPos > parseInt(verticalBoundary[2].offsetTop) && topPos < parseInt(verticalBoundary[2].offsetTop + 310))
+//         {
+//             if(leftPos < parseInt(verticalBoundary[2].offsetLeft)-60)
+//             {
+//                 leftPos = leftPos + speed;
+//                 pacman.style.left = leftPos + "px";
+//             }
+//             if(leftPos < parseInt(verticalBoundary[3].offsetLeft)-60)
+//             {
+//                 leftPos = leftPos + speed;
+//                 pacman.style.left = leftPos + "px";
+//             }
+//         }
+//         else if(leftPos < parseInt(verticalBoundary[1].offsetLeft)-30)
+//         {
+//             leftPos = leftPos + speed;
+//             pacman.style.left = leftPos + "px";
+//         }
+//     }
+//     if(event.key == "a")
+//     {
+//         pacman.style.transform = "rotate(180deg)";
+//         if(topPos > parseInt(verticalBoundary[2].offsetTop) && topPos < parseInt(verticalBoundary[2].offsetTop + 310))
+//         {
+//             if(leftPos > parseInt(verticalBoundary[2].offsetLeft)+30)
+//             {
+//                 leftPos = leftPos - speed;
+//                 pacman.style.left = leftPos + "px";
+//             }
+//             if(leftPos > parseInt(verticalBoundary[3].offsetLeft)-60)
+//             {
+//                 leftPos = leftPos + speed;
+//                 pacman.style.left = leftPos + "px";
+//             }
+// }
+//         else if(leftPos > parseInt(verticalBoundary[0].offsetLeft)+40)
+//         {
+//             leftPos = leftPos - speed;
+//             pacman.style.left = leftPos + "px";
+//         }
+//     }
+//     if(event.key == "w")
+//     {
+//         pacman.style.transform = "rotate(-90deg)";
+//         if(leftPos > parseInt(horizontalBoundary[2].offsetLeft) && leftPos < parseInt(horizontalBoundary[2].offsetLeft+910))
+//         {
+//             if(topPos > parseInt(horizontalBoundary[2].offsetTop)+30)
+//             {
+//                 topPos = topPos - speed;
+//                 pacman.style.top = topPos + "px";
+//             }
+//             if(topPos > parseInt(horizontalBoundary[3].offsetTop))
+//             {
+//                 topPos = topPos + speed;
+//                 pacman.style.top = topPos + "px";
+//             }
+// }
+//         else if(topPos > parseInt(horizontalBoundary[0].offsetTop)+30)
+//         {
+//             topPos = topPos - speed;
+//             pacman.style.top = topPos + "px";
+//         }
+//     }
+//     if(event.key == "s")
+//     {
+//         pacman.style.transform = "rotate(90deg)";
+//         if(leftPos > parseInt(horizontalBoundary[3].offsetLeft-10) && leftPos < parseInt(horizontalBoundary[3].offsetLeft+910))
+//         {
+//             if(topPos < parseInt(horizontalBoundary[3].offsetTop)-60)
+//             {
+//                 topPos = topPos + speed;
+//                 pacman.style.top = topPos + "px";
+//             }
+//             if(topPos < parseInt(horizontalBoundary[2].offsetTop))
+//             {
+//                 topPos = topPos - speed;
+//                 pacman.style.top = topPos + "px";
+//             }
+//         }
+//         else if(topPos < parseInt(horizontalBoundary[1].offsetTop)-60)
+//         {
+//             topPos = topPos + speed;
+//             pacman.style.top = topPos + "px";
+//         }
+//     }
+// });
 
 function ghosts(){
     var block = document.querySelector('.block');
@@ -139,12 +138,12 @@ function ghosts(){
     let n = [Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4))];
     let int = setInterval(moveGhosts,15);
     function moveGhosts(){
-        for(let i=0;i<4;i++){
+        for(let j=0;j<4;j++){
             console.log(n);
-            let gh = ghosts[i];
+            let gh = ghosts[j];
             let gh_top = gh.getBoundingClientRect().top;
             let gh_left = gh.getBoundingClientRect().left;
-            switch(n[i]){
+            switch(n[j]){
                 case 1:
                     if(gh_top > parseInt(verticalBoundary[2].offsetTop) && gh_top < parseInt(verticalBoundary[2].offsetTop + 310))
                     {
@@ -159,7 +158,7 @@ function ghosts(){
                             gh.style.left = gh_left + "px";
                         }
                         else{
-                            n[i]=Math.ceil((Math.random()*4));
+                            n[j]=Math.ceil((Math.random()*4));
                         }
                     }
                     else if(gh_left < parseInt(verticalBoundary[1].offsetLeft)-30)
@@ -168,7 +167,7 @@ function ghosts(){
                         gh.style.left = gh_left + "px";
                     }
                     else{
-                        n[i]=Math.ceil((Math.random()*4));
+                        n[j]=Math.ceil((Math.random()*4));
                     }
                 case 2:
                     if(gh_top > parseInt(verticalBoundary[2].offsetTop) && gh_top < parseInt(verticalBoundary[2].offsetTop + 310))
@@ -184,7 +183,7 @@ function ghosts(){
                             gh.style.left = gh_left + "px";
                         }
                         else{
-                            n[i]=Math.ceil((Math.random()*4));
+                            n[j]=Math.ceil((Math.random()*4));
                         }
                     }
                     else if(gh_left > parseInt(verticalBoundary[0].offsetLeft)+40)
@@ -193,12 +192,45 @@ function ghosts(){
                         gh.style.left = gh_left + "px";
                     }
                     else{
-                        n[i]=Math.ceil((Math.random()*4));
+                        n[j]=Math.ceil((Math.random()*4));
                     }
                 case 3:
-                    if(gh_left > parseInt(horizontalBoundary[2].offsetLeft) && gh_left < parseInt(horizontalBoundary[2].offsetLeft+910))
+                    if(gh_left > parseInt(horizontalBoundary[2].offsetLeft) && gh_left < parseInt(horizontalBoundary[2].offsetLeft+900))
                     {
-                        if(gh_top > parseInt(horizontalBoundary[2].offsetTop)+30)
+                        if(gh_left > parseInt(horizontalBoundary[4].offsetLeft) && gh_left < parseInt(horizontalBoundary[4].offsetLeft+400))
+                        {
+                            if(gh_top > parseInt(horizontalBoundary[4].offsetTop))
+                            {
+                                gh_top = gh_top + speedG;
+                                gh.style.top = gh_top + "px";
+                            }
+                            else{
+                                n[j]=Math.ceil((Math.random()*4));
+                            }
+                        }
+                        else if(gh_left > parseInt(horizontalBoundary[6].offsetLeft)-60 && gh_left < parseInt(horizontalBoundary[6].offsetLeft+200))
+                        {
+                            if(gh_top < parseInt(horizontalBoundary[6].offsetTop)+30)
+                            {
+                                gh_top = gh_top + speedG;
+                                gh.style.top = gh_top + "px";
+                            }
+                            else{
+                                n[j]=Math.ceil((Math.random()*4));
+                            }
+                        }
+                        else if(gh_left > parseInt(horizontalBoundary[7].offsetLeft) && gh_left < parseInt(horizontalBoundary[7].offsetLeft+200))
+                        {
+                            if(gh_top < parseInt(horizontalBoundary[7].offsetTop)+30)
+                            {
+                                gh_top = gh_top + speedG;
+                                gh.style.top = gh_top + "px";
+                            }
+                            else{
+                                n[j]=Math.ceil((Math.random()*4));
+                            }
+                        }
+                        else if(gh_top > parseInt(horizontalBoundary[2].offsetTop)+30)
                         {
                             gh_top = gh_top - speedG;
                             gh.style.top = gh_top + "px";
@@ -209,7 +241,7 @@ function ghosts(){
                             gh.style.top = gh_top + "px";
                         }
                         else{
-                            n[i]=Math.ceil((Math.random()*4));
+                            n[j]=Math.ceil((Math.random()*4));
                         }
                     }
                     else if(gh_top > parseInt(horizontalBoundary[0].offsetTop)+30)
@@ -218,12 +250,49 @@ function ghosts(){
                         gh.style.top = gh_top + "px";
                     }
                     else{
-                        n[i]=Math.ceil((Math.random()*4));
+                        n[j]=Math.ceil((Math.random()*4));
                     }
+
+
+                    // if(gh_left > parseInt(horizontalBoundary[2].offsetLeft) && gh_left < parseInt(horizontalBoundary[2].offsetLeft+910))
+                    // {
+                    //     if(gh_top > parseInt(horizontalBoundary[2].offsetTop)+30)
+                    //     {
+                    //         gh_top = gh_top - speedG;
+                    //         gh.style.top = gh_top + "px";
+                    //     }
+                    //     else if(gh_top > parseInt(horizontalBoundary[3].offsetTop))
+                    //     {
+                    //         gh_top = gh_top + speedG;
+                    //         gh.style.top = gh_top + "px";
+                    //     }
+                    //     else{
+                    //         n[j]=Math.ceil((Math.random()*4));
+                    //     }
+                    // }
+                    // else if(gh_top > parseInt(horizontalBoundary[0].offsetTop)+30)
+                    // {
+                    //     gh_top = gh_top - speedG;
+                    //     gh.style.top = gh_top + "px";
+                    // }
+                    // else{
+                    //     n[j]=Math.ceil((Math.random()*4));
+                    // }
                 case 4:
                     if(gh_left > parseInt(horizontalBoundary[3].offsetLeft-10) && gh_left < parseInt(horizontalBoundary[3].offsetLeft+910))
                     {
-                        if(gh_top < parseInt(horizontalBoundary[3].offsetTop)-60)
+                        if(gh_left > parseInt(horizontalBoundary[5].offsetLeft) && gh_left < parseInt(horizontalBoundary[5].offsetLeft+400))
+                        {
+                            if(gh_top > parseInt(horizontalBoundary[5].offsetTop)-30)
+                            {
+                                gh.style.top = gh_top + "px";
+                                console.log("Blah 1-1");
+                            }
+                            else{
+                                n[j]=Math.ceil((Math.random()*4));
+                            }
+                        }
+                        else if(gh_top < parseInt(horizontalBoundary[3].offsetTop)-60)
                         {
                             gh_top = gh_top + speedG;
                             gh.style.top = gh_top + "px";
@@ -234,7 +303,7 @@ function ghosts(){
                             gh.style.top = gh_top + "px";
                         }
                         else{
-                            n[i]=Math.ceil((Math.random()*4));
+                            n[j]=Math.ceil((Math.random()*4));
                         }
                     }
                     else if(gh_top < parseInt(horizontalBoundary[1].offsetTop)-60)
@@ -243,8 +312,39 @@ function ghosts(){
                         gh.style.top = gh_top + "px";
                     }
                     else{
-                        n[i]=Math.ceil((Math.random()*4));
+                        n[j]=Math.ceil((Math.random()*4));
                     }
+                    
+
+
+
+
+
+
+                    // if(gh_left > parseInt(horizontalBoundary[3].offsetLeft-10) && gh_left < parseInt(horizontalBoundary[3].offsetLeft+910))
+                    // {
+                    //     if(gh_top < parseInt(horizontalBoundary[3].offsetTop)-60)
+                    //     {
+                    //         gh_top = gh_top + speedG;
+                    //         gh.style.top = gh_top + "px";
+                    //     }
+                    //     else if(gh_top < parseInt(horizontalBoundary[2].offsetTop))
+                    //     {
+                    //         gh_top = gh_top - speedG;
+                    //         gh.style.top = gh_top + "px";
+                    //     }
+                    //     else{
+                    //         n[j]=Math.ceil((Math.random()*4));
+                    //     }
+                    // }
+                    // else if(gh_top < parseInt(horizontalBoundary[1].offsetTop)-60)
+                    // {
+                    //     gh_top = gh_top + speedG;
+                    //     gh.style.top = gh_top + "px";
+                    // }
+                    // else{
+                    //     n[j]=Math.ceil((Math.random()*4));
+                    // }
 
 
             }
