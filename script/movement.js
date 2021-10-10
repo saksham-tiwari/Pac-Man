@@ -8,8 +8,8 @@ let verticalBoundary = document.querySelectorAll('.vertical-line');
 // console.log(verticalBoundary[2].offsetLeft);
 
 window.addEventListener("keypress", function(event){
-    console.log(topPos);
-    console.log(leftPos);
+    // console.log(leftPos);
+    // console.log(topPos);
     if(event.key == "d")
     {
         pacman.style.transform = "rotate(0deg)";
