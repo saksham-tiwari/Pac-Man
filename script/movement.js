@@ -5,10 +5,10 @@ var speed = 5;
 let horizontalBoundary = document.querySelectorAll('.horizontal-line');
 let verticalBoundary = document.querySelectorAll('.vertical-line');
 
-console.log(verticalBoundary[2].offsetLeft);
+// console.log(verticalBoundary[2].offsetLeft);
 
 window.addEventListener("keypress", function(event){
-    // console.log(topPos);
+    console.log(topPos);
     console.log(leftPos);
     if(event.key == "d")
     {

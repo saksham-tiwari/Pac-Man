@@ -30,6 +30,20 @@
     background-size: cover;
 }
 
+.points{
+    display: block;
+    z-index: 1;
+    position: absolute;
+    left: 67px;
+    top: 42px;
+    background: url(../img/Points.png);
+    height: 48px;
+    width: 45px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .vertical-line{
     z-index: 1;
     position: absolute;

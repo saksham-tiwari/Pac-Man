@@ -16,7 +16,7 @@ let b=false;
 // let verticalBoundary = document.querySelectorAll('.vertical-line');
 
 
-console.log(horizontalBoundary[2].offsetTop);
+// console.log(horizontalBoundary[2].offsetTop);
 setTimeout(ghosts, 10);
 setInterval(PacManAnimation, 115);
 function PacManAnimation()
@@ -139,7 +139,7 @@ function ghosts(){
     let int = setInterval(moveGhosts,15);
     function moveGhosts(){
         for(let j=0;j<4;j++){
-            console.log(n);
+            // console.log(n);
             let gh = ghosts[j];
             let gh_top = gh.getBoundingClientRect().top;
             let gh_left = gh.getBoundingClientRect().left;
@@ -286,7 +286,7 @@ function ghosts(){
                             if(gh_top > parseInt(horizontalBoundary[5].offsetTop)-30)
                             {
                                 gh.style.top = gh_top + "px";
-                                console.log("Blah 1-1");
+                                // console.log("Blah 1-1");
                             }
                             // else{
                             //     n[j]=Math.ceil((Math.random()*4));
