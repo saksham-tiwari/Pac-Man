@@ -13,21 +13,23 @@ window.addEventListener("keypress", function(event){
     if(event.key == "d")
     {
         pacman.style.transform = "rotate(0deg)";
-        if(topPos > parseInt(verticalBoundary[2].offsetTop) && topPos < parseInt(verticalBoundary[2].offsetTop + 300))
+        if(topPos > parseInt(verticalBoundary[2].offsetTop) && topPos < parseInt(verticalBoundary[2].offsetTop) + 300)
         {
-            if(leftPos > parseInt(verticalBoundary[2].offsetLeft) && leftPos < parseInt(verticalBoundary[3].offsetLeft)-60)
+            if(topPos > parseInt(verticalBoundary[6].offsetTop) && topPos < parseInt(verticalBoundary[6].offsetTop) + 100)
             {
-                console.log("b");
+                if(leftPos > parseInt(verticalBoundary[6].offsetLeft) && leftPos < parseInt(verticalBoundary[7].offsetLeft)-60)
+                {
+                    leftPos = leftPos + speed;
+                    pacman.style.left = leftPos + "px";
+                }
+            }
+            else if(leftPos > parseInt(verticalBoundary[2].offsetLeft) && leftPos < parseInt(verticalBoundary[3].offsetLeft)-60)
+            {
                 leftPos = leftPos + speed;
                 pacman.style.left = leftPos + "px";
             }
-            // if(leftPos < parseInt(verticalBoundary[3].offsetLeft)-60)
-            // {
-            //     leftPos = leftPos + speed;
-            //     pacman.style.left = leftPos + "px";
-            // }
         }
-        else if(leftPos < parseInt(verticalBoundary[1].offsetLeft)-30)
+        else if(leftPos < parseInt(verticalBoundary[1].offsetLeft)-60)
         {
             leftPos = leftPos + speed;
             pacman.style.left = leftPos + "px";
@@ -36,31 +38,36 @@ window.addEventListener("keypress", function(event){
     if(event.key == "a")
     {
         pacman.style.transform = "rotate(180deg)";
-        if(topPos > parseInt(verticalBoundary[2].offsetTop) && topPos < parseInt(verticalBoundary[2].offsetTop + 310))
+        if(topPos > parseInt(verticalBoundary[2].offsetTop) && topPos < parseInt(verticalBoundary[2].offsetTop) + 300)
         {
-            if(leftPos > parseInt(verticalBoundary[2].offsetLeft)+30)
+            if(topPos > parseInt(verticalBoundary[6].offsetTop) && topPos < parseInt(verticalBoundary[6].offsetTop) + 100)
+            {
+                if(leftPos > parseInt(verticalBoundary[6].offsetLeft)+30 && leftPos < parseInt(verticalBoundary[7].offsetLeft))
+                {
+                    leftPos = leftPos - speed;
+                    pacman.style.left = leftPos + "px";
+                }
+            }
+            else if(leftPos > parseInt(verticalBoundary[2].offsetLeft)+30 && leftPos < parseInt(verticalBoundary[3].offsetLeft))
             {
                 leftPos = leftPos - speed;
                 pacman.style.left = leftPos + "px";
             }
-            if(leftPos > parseInt(verticalBoundary[3].offsetLeft)-60)
-            {
-                leftPos = leftPos + speed;
-                pacman.style.left = leftPos + "px";
-            }
         }
-        else if(leftPos > parseInt(verticalBoundary[0].offsetLeft)+40)
+        else if(leftPos > parseInt(verticalBoundary[0].offsetLeft)+50)
         {
             leftPos = leftPos - speed;
             pacman.style.left = leftPos + "px";
         }
     }
+
+    //up movement
     if(event.key == "w")
     {
         pacman.style.transform = "rotate(-90deg)";
-        if(leftPos > parseInt(horizontalBoundary[2].offsetLeft) && leftPos < parseInt(horizontalBoundary[2].offsetLeft+900))
+        if(leftPos > parseInt(horizontalBoundary[2].offsetLeft) && leftPos < parseInt(horizontalBoundary[2].offsetLeft+700))
         {
-            if(leftPos > parseInt(horizontalBoundary[4].offsetLeft) && leftPos < parseInt(horizontalBoundary[4].offsetLeft+400))
+            if(leftPos > parseInt(horizontalBoundary[4].offsetLeft) && leftPos < parseInt(horizontalBoundary[4].offsetLeft+300))
             {
                 if(topPos > parseInt(horizontalBoundary[4].offsetTop))
                 {
@@ -101,12 +108,14 @@ window.addEventListener("keypress", function(event){
             pacman.style.top = topPos + "px";
         }
     }
+
+    //down movement
     if(event.key == "s")
     {
         pacman.style.transform = "rotate(90deg)";
-        if(leftPos > parseInt(horizontalBoundary[3].offsetLeft-10) && leftPos < parseInt(horizontalBoundary[3].offsetLeft+910))
+        if(leftPos > parseInt(horizontalBoundary[3].offsetLeft-10) && leftPos < parseInt(horizontalBoundary[3].offsetLeft+700))
         {
-            if(leftPos > parseInt(horizontalBoundary[5].offsetLeft) && leftPos < parseInt(horizontalBoundary[5].offsetLeft+400))
+            if(leftPos > parseInt(horizontalBoundary[5].offsetLeft) && leftPos < parseInt(horizontalBoundary[5].offsetLeft+300))
             {
                 if(topPos < parseInt(horizontalBoundary[5].offsetTop)-60)
                 {
