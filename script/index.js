@@ -1,16 +1,23 @@
 let pacman = document.querySelector('#pacman');
 let pacman_Animation = ['url(img/Pacman-1.png)', 'url(img/Pacman-2.png)', 'url(img/Pacman-3.png)']
+let blinky = document.createElement("div");
+let pinky = document.createElement("div");
+let inky = document.createElement("div");
+let clyde = document.createElement("div");
+
 let leftPos = 430;
 var topPos = 370;
 let i=1;
 var speed = 6;
+var speedG = 5;
 let b=false;
 
 let horizontalBoundary = document.querySelectorAll('.horizontal-line');
 let verticalBoundary = document.querySelectorAll('.vertical-line');
 
-console.log(horizontalBoundary[2].offsetTop);
 
+console.log(horizontalBoundary[2].offsetTop);
+setTimeout(ghosts, 10);
 setInterval(PacManAnimation, 115);
 function PacManAnimation()
 {
@@ -112,3 +119,134 @@ window.addEventListener("keypress", function(event){
     }
 });
 
+function ghosts(){
+    var block = document.querySelector('.block');
+    block.appendChild(blinky);
+    block.appendChild(pinky);
+    block.appendChild(inky);
+    block.appendChild(clyde);
+
+    blinky.classList.add("ghost");
+    blinky.classList.add("blinky");
+    pinky.classList.add("ghost");
+    pinky.classList.add("pinky");
+    inky.classList.add("ghost");
+    inky.classList.add("inky");
+    clyde.classList.add("ghost");
+    clyde.classList.add("clyde");
+    let ghosts = document.querySelectorAll('.ghost');
+    let n = [Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4))];
+    let int = setInterval(moveGhosts,15);
+    function moveGhosts(){
+        for(let i=0;i<4;i++){
+            console.log(n);
+            let gh = ghosts[i];
+            let gh_top = gh.getBoundingClientRect().top;
+            let gh_left = gh.getBoundingClientRect().left;
+            switch(n[i]){
+                case 1:
+                    if(gh_top > parseInt(verticalBoundary[2].offsetTop) && gh_top < parseInt(verticalBoundary[2].offsetTop + 310))
+                    {
+                        if(gh_left < parseInt(verticalBoundary[2].offsetLeft)-60)
+                        {
+                            gh_left = gh_left+speedG;
+                            gh.style.left = gh_left + "px";
+                        }
+                        else if(gh_left < parseInt(verticalBoundary[3].offsetLeft)-60)
+                        {
+                            gh_left = gh_left+speedG;
+                            gh.style.left = gh_left + "px";
+                        }
+                        else{
+                            n[i]=Math.ceil((Math.random()*4));
+                        }
+                    }
+                    else if(gh_left < parseInt(verticalBoundary[1].offsetLeft)-30)
+                    {
+                        gh_left = gh_left+speedG;
+                        gh.style.left = gh_left + "px";
+                    }
+                    else{
+                        n[i]=Math.ceil((Math.random()*4));
+                    }
+                case 2:
+                    if(gh_top > parseInt(verticalBoundary[2].offsetTop) && gh_top < parseInt(verticalBoundary[2].offsetTop + 310))
+                    {
+                        if(gh_left > parseInt(verticalBoundary[2].offsetLeft)+30)
+                        {
+                            gh_left = gh_left - speedG;
+                            gh.style.left = gh_left + "px";
+                        }
+                        else if(gh_left > parseInt(verticalBoundary[3].offsetLeft)-60)
+                        {
+                            gh_left = gh_left + speedG;
+                            gh.style.left = gh_left + "px";
+                        }
+                        else{
+                            n[i]=Math.ceil((Math.random()*4));
+                        }
+                    }
+                    else if(gh_left > parseInt(verticalBoundary[0].offsetLeft)+40)
+                    {
+                        gh_left = gh_left - speedG;
+                        gh.style.left = gh_left + "px";
+                    }
+                    else{
+                        n[i]=Math.ceil((Math.random()*4));
+                    }
+                case 3:
+                    if(gh_left > parseInt(horizontalBoundary[2].offsetLeft) && gh_left < parseInt(horizontalBoundary[2].offsetLeft+910))
+                    {
+                        if(gh_top > parseInt(horizontalBoundary[2].offsetTop)+30)
+                        {
+                            gh_top = gh_top - speedG;
+                            gh.style.top = gh_top + "px";
+                        }
+                        else if(gh_top > parseInt(horizontalBoundary[3].offsetTop))
+                        {
+                            gh_top = gh_top + speedG;
+                            gh.style.top = gh_top + "px";
+                        }
+                        else{
+                            n[i]=Math.ceil((Math.random()*4));
+                        }
+                    }
+                    else if(gh_top > parseInt(horizontalBoundary[0].offsetTop)+30)
+                    {
+                        gh_top = gh_top - speedG;
+                        gh.style.top = gh_top + "px";
+                    }
+                    else{
+                        n[i]=Math.ceil((Math.random()*4));
+                    }
+                case 4:
+                    if(gh_left > parseInt(horizontalBoundary[3].offsetLeft-10) && gh_left < parseInt(horizontalBoundary[3].offsetLeft+910))
+                    {
+                        if(gh_top < parseInt(horizontalBoundary[3].offsetTop)-60)
+                        {
+                            gh_top = gh_top + speedG;
+                            gh.style.top = gh_top + "px";
+                        }
+                        else if(gh_top < parseInt(horizontalBoundary[2].offsetTop))
+                        {
+                            gh_top = gh_top - speedG;
+                            gh.style.top = gh_top + "px";
+                        }
+                        else{
+                            n[i]=Math.ceil((Math.random()*4));
+                        }
+                    }
+                    else if(gh_top < parseInt(horizontalBoundary[1].offsetTop)-60)
+                    {
+                        gh_top = gh_top + speedG;
+                        gh.style.top = gh_top + "px";
+                    }
+                    else{
+                        n[i]=Math.ceil((Math.random()*4));
+                    }
+
+
+            }
+        }
+    }
+};
