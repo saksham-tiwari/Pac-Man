@@ -10,6 +10,7 @@ const scoreUI = document.getElementById('score');
 // console.log(pacman.offsetLeft);
 // console.log(pacman.offsetTop);
 // console.log(points.length);
+scoreUI.innerHTML = Score;
 
 for(let x=0; x<100;x++) {
     if(orbLeft < parseInt(verticalBoundary[1].offsetLeft) - 90 && orbTop === parseInt(horizontalBoundary[0].offsetTop) + 30)
