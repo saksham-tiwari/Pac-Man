@@ -65,7 +65,7 @@ window.addEventListener("keypress", function(event){
     if(event.key == "w")
     {
         pacman.style.transform = "rotate(-90deg)";
-        if(leftPos > parseInt(horizontalBoundary[2].offsetLeft) && leftPos < parseInt(horizontalBoundary[2].offsetLeft+700))
+        if(leftPos > parseInt(horizontalBoundary[2].offsetLeft) && leftPos < parseInt(horizontalBoundary[2].offsetLeft+680))
         {
             if(leftPos > parseInt(horizontalBoundary[4].offsetLeft) && leftPos < parseInt(horizontalBoundary[4].offsetLeft+300))
             {
