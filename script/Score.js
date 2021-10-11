@@ -4,6 +4,7 @@ var Score = 0;
 let orbLeft = parseInt(verticalBoundary[0].offsetLeft) + 40;
 let orbTop = parseInt(verticalBoundary[0].offsetTop) + 30;
 const scoreUI = document.getElementById('score');
+var q = false;
 
 // console.log(points[0].offsetLeft);
 // console.log(points[0].offsetTop);
@@ -162,7 +163,7 @@ for(x=0;x<100;x++)
 
 let points = document.querySelectorAll('.points')
 
-setInterval(checkScore, 1);
+let s = setInterval(checkScore, 1);
 function checkScore()
 {
     for(let i=0;i<points.length;i++)
@@ -179,5 +180,12 @@ function checkScore()
             }
             scoreUI.innerHTML = Score;
         }
+        if(Score === 150)
+        {
+            clearInterval(s);
+            q = true;
+        }
     }
+    if(q === true)
+    alert("WON");
 }
