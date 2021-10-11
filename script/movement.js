@@ -7,7 +7,7 @@ let verticalBoundary = document.querySelectorAll('.vertical-line');
 
 // console.log(verticalBoundary[2].offsetLeft);
 
-window.addEventListener("keypress", function(event){
+window.addEventListener("keydown", function(event){
     // console.log(leftPos);
     // console.log(topPos);
     if(event.key == "d")
@@ -19,6 +19,21 @@ window.addEventListener("keypress", function(event){
             {
                 if(leftPos > parseInt(verticalBoundary[6].offsetLeft) && leftPos < parseInt(verticalBoundary[7].offsetLeft)-60)
                 {
+                    leftPos = leftPos + speed;
+                    pacman.style.left = leftPos + "px";
+                }
+            }
+            else if(topPos > parseInt(verticalBoundary[4].offsetTop) && topPos < parseInt(verticalBoundary[4].offsetTop) + 100)
+            {
+                if(leftPos < parseInt(verticalBoundary[4].offsetLeft)-60 && leftPos > parseInt(verticalBoundary[2].offsetLeft))
+                {
+                    console.log("gg");
+                    leftPos = leftPos + speed;
+                    pacman.style.left = leftPos + "px";
+                }
+                if(leftPos > parseInt(verticalBoundary[5].offsetLeft)-60 && leftPos < parseInt(verticalBoundary[3].offsetLeft)-60)
+                {
+                    console.log("gg");
                     leftPos = leftPos + speed;
                     pacman.style.left = leftPos + "px";
                 }
@@ -44,6 +59,21 @@ window.addEventListener("keypress", function(event){
             {
                 if(leftPos > parseInt(verticalBoundary[6].offsetLeft)+30 && leftPos < parseInt(verticalBoundary[7].offsetLeft))
                 {
+                    leftPos = leftPos - speed;
+                    pacman.style.left = leftPos + "px";
+                }
+            }
+            else if(topPos > parseInt(verticalBoundary[4].offsetTop) && topPos < parseInt(verticalBoundary[4].offsetTop) + 100)
+            {
+                if(leftPos < parseInt(verticalBoundary[4].offsetLeft)+30 && leftPos > parseInt(verticalBoundary[2].offsetLeft)+30)
+                {
+                    console.log("gg");
+                    leftPos = leftPos - speed;
+                    pacman.style.left = leftPos + "px";
+                }
+                if(leftPos > parseInt(verticalBoundary[5].offsetLeft)+30 && leftPos < parseInt(verticalBoundary[3].offsetLeft))
+                {
+                    console.log("gg");
                     leftPos = leftPos - speed;
                     pacman.style.left = leftPos + "px";
                 }
