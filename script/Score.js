@@ -3,6 +3,7 @@ let removeOrb = false;
 var Score = 0;
 let orbLeft = parseInt(verticalBoundary[0].offsetLeft) + 40;
 let orbTop = parseInt(verticalBoundary[0].offsetTop) + 30;
+const scoreUI = document.getElementById('score');
 
 // console.log(points[0].offsetLeft);
 // console.log(points[0].offsetTop);
@@ -175,6 +176,7 @@ function checkScore()
                 removeOrb = false;
                 points[i].remove();
             }
+            scoreUI.innerHTML = Score;
         }
     }
 }
