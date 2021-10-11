@@ -14,14 +14,18 @@ function ghosts(){
     clyde.classList.add("ghost");
     clyde.classList.add("clyde");
     let ghosts = document.querySelectorAll('.ghost');
+    
     let n = [Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4))];
+    setTimeout(()=>{n = [Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4))];},1000);
     let int = setInterval(moveGhosts,50);
     function moveGhosts(){
         for(let j=0;j<4;j++){
-            // console.log(n);
+            console.log(n);
             let gh = ghosts[j];
             let gh_top = parseInt(gh.offsetTop);
             let gh_left = parseInt(gh.offsetLeft);
+            
+    
             switch(n[j]){
                 case 1:
                     if(gh_top > parseInt(verticalBoundary[2].offsetTop) && gh_top < parseInt(verticalBoundary[2].offsetTop) + 300)
@@ -373,5 +377,7 @@ function ghosts(){
 
             }
         }
+        // clearInterval(reset);
     }
+
 };
