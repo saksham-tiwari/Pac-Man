@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Bahnschrift, Montserrat, sans-serif;
 }
 body{
     background: linear-gradient(to top, #C6426E, #642B73);
@@ -123,5 +124,7 @@ body{
     width: 150px;
     margin-left: 25%;
     margin-top: 90%;
+    text-align: center;
     color: #000;
+    font-size: x-large;
 }
