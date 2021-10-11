@@ -16,7 +16,7 @@ function ghosts(){
     let ghosts = document.querySelectorAll('.ghost');
     
     let n = [Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4))];
-    setTimeout(()=>{n = [Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4))];},1000);
+    setInterval(()=>{n = [Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4))];},1000);
     let int = setInterval(moveGhosts,50);
     function moveGhosts(){
         for(let j=0;j<4;j++){

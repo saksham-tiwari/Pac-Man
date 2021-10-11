@@ -81,7 +81,7 @@ body{
 .ghost{
     position: absolute;
     width: 60px;
-    height: 60px;
+    height: 50px;
     top: 40%;
 }
 .blinky{
