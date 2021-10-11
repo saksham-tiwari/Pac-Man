@@ -15,7 +15,7 @@ function ghosts(){
     clyde.classList.add("clyde");
     let ghosts = document.querySelectorAll('.ghost');
     let n = [Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4)),Math.ceil((Math.random()*4))];
-    let int = setInterval(moveGhosts,10);
+    let int = setInterval(moveGhosts,50);
     function moveGhosts(){
         for(let j=0;j<4;j++){
             // console.log(n);

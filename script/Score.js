@@ -176,6 +176,8 @@ function checkScore()
                 points[i].remove();
             }
             console.log(Score);
+            let sco = document.querySelector(".score");
+            sco.innerHTML = Score;
         }
     }
 }
