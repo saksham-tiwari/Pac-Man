@@ -7,7 +7,7 @@ let verticalBoundary = document.querySelectorAll('.vertical-line');
 
 // console.log(verticalBoundary[2].offsetLeft);
 
-window.addEventListener("keypress", function(event){
+window.addEventListener("keydown", function(event){
     // console.log(leftPos);
     // console.log(topPos);
     if(event.key == "d")
@@ -71,7 +71,7 @@ window.addEventListener("keypress", function(event){
                     leftPos = leftPos - speed;
                     pacman.style.left = leftPos + "px";
                 }
-                if(leftPos > parseInt(verticalBoundary[5].offsetLeft)+30 && leftPos < parseInt(verticalBoundary[3].offsetLeft)-60)
+                if(leftPos > parseInt(verticalBoundary[5].offsetLeft)+30 && leftPos < parseInt(verticalBoundary[3].offsetLeft))
                 {
                     console.log("gg");
                     leftPos = leftPos - speed;

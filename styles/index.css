@@ -15,7 +15,7 @@ body{
 /*-------Game Window-------*/
 
 .block{
-    margin: 3% 0 auto auto;
+    margin: 3% 0 auto 7%;
     width: 70vw;
     height: 85vh;
     box-shadow: 1px 10px 50px rgba(0, 0, 0, 0.5);
@@ -82,7 +82,7 @@ body{
 .ghost{
     position: absolute;
     width: 60px;
-    height: 50px;
+    height: 60px;
     top: 40%;
 }
 .blinky{
@@ -112,20 +112,27 @@ body{
 
 /*---------Score UI--------*/
 #scoreUI{
-    background-color: #000;
     height: 85vh;
     width: 20vw;
     margin: 3% auto auto 0;
     /* display: inline-block; */
 }
+
+#scoreUI h1{
+    color: #132527;
+    margin-top: 70%;
+    text-align: center;
+}
+
 #score{
+    border-radius: 20px;
+    margin-top: 10px;
     background-color: #fff;
     height: 50px;
     width: 150px;
     margin-left: 25%;
-    margin-top: 90%;
     text-align: center;
-    color: #000;
+    color: #642B73;
     font-size: x-large;
-    padding-top: 10px;
+    padding-top: 11px;
 }
