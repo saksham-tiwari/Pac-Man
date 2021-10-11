@@ -20,7 +20,7 @@ function ghosts(){
     let int = setInterval(moveGhosts,50);
     function moveGhosts(){
         for(let j=0;j<4;j++){
-            console.log(n);
+            // console.log(n);
             let gh = ghosts[j];
             let gh_top = parseInt(gh.offsetTop);
             let gh_left = parseInt(gh.offsetLeft);
