@@ -4,6 +4,7 @@ let blinky = document.createElement("div");
 let pinky = document.createElement("div");
 let inky = document.createElement("div");
 let clyde = document.createElement("div");
+let variable = true;
 
 // let leftPos = 430;
 // var topPos = 370;

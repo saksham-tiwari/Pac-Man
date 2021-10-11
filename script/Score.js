@@ -176,6 +176,20 @@ function checkScore()
             {
                 Score++;
                 removeOrb = false;
+                if(points[i].classList.contains("power")){
+                    let ghs = document.querySelectorAll(".ghost");
+                    variable = false;
+                    ghs.forEach((ghost)=>{
+                        ghost.classList.add("scared");
+                    })
+                    setTimeout(()=>{
+                        ghs.forEach((ghost)=>{
+                            ghost.classList.remove("scared");
+                        })
+                        variable = true;
+                    },10000);
+
+                }
                 points[i].remove();
             }
             scoreUI.innerHTML = Score;
@@ -189,3 +203,16 @@ function checkScore()
     if(q === true)
     alert("WON");
 }
+
+function powerOrb(){
+    let orbs = document.querySelectorAll(".points");
+    let len = orbs.length;
+    let arr = [Math.floor((Math.random()*len)),Math.floor((Math.random()*len)),Math.floor((Math.random()*len)),Math.floor((Math.random()*len))];
+    arr.forEach((elem)=>{
+        orbs[elem].classList.add("power");
+        orbs[elem].style.backgroundImage = "url(img/power.png)";
+    })
+}
+
+powerOrb();
+
