@@ -162,7 +162,6 @@ for(x=0;x<20;x++)
 }
 
 let points = document.querySelectorAll('.points')
-console.log(points.length);
 
 let s = setInterval(checkScore, 1);
 function checkScore()
@@ -195,7 +194,7 @@ function checkScore()
             }
             scoreUI.innerHTML = Score;
         }
-        if(points.length === 0)
+        if(Score === 110)
         {
             clearInterval(s);
             q = true;

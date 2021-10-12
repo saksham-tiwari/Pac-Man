@@ -97,6 +97,7 @@ window.addEventListener("keydown", function(event){
         pacman.style.transform = "rotate(-90deg)";
         if(leftPos > parseInt(horizontalBoundary[2].offsetLeft) && leftPos < parseInt(horizontalBoundary[2].offsetLeft+680))
         {
+            console.log("beh");
             if(leftPos > parseInt(horizontalBoundary[4].offsetLeft) && leftPos < parseInt(horizontalBoundary[4].offsetLeft+300))
             {
                 if(topPos > parseInt(horizontalBoundary[4].offsetTop))
@@ -126,13 +127,13 @@ window.addEventListener("keydown", function(event){
                 topPos = topPos - speed;
                 pacman.style.top = topPos + "px";
             }
-            if(topPos > parseInt(horizontalBoundary[3].offsetTop))
+            if(topPos > parseInt(horizontalBoundary[3].offsetTop)+30)
             {
-                topPos = topPos + speed;
+                topPos = topPos - speed;
                 pacman.style.top = topPos + "px";
             }
         }
-        else if(topPos > parseInt(horizontalBoundary[0].offsetTop)+30)
+        else if(topPos > parseInt(horizontalBoundary[0].offsetTop)+30 && topPos < parseInt(horizontalBoundary[1].offsetTop))
         {
             topPos = topPos - speed;
             pacman.style.top = topPos + "px";
