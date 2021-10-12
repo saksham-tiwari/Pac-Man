@@ -191,6 +191,7 @@ function checkScore()
 
                 }
                 points[i].remove();
+                document.getElementById("Eat").play();
             }
             scoreUI.innerHTML = Score;
         }
@@ -202,9 +203,8 @@ function checkScore()
     }
     if(q === true)
     {
-        document.getElementsById("gameWon").play();
-        setTimeout(function(){
-        alert("CONGRATULATIONS!!!!!!!!");}, t);
+        document.getElementById("gameWon").removeAttribute("muted");
+        alert("CONGRATULATIONS!!!!!!!!");
         speedG = speedG*5;
         location.reload();
     }

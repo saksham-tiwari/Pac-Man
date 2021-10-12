@@ -25,7 +25,7 @@ window.addEventListener("keydown", function(event){
             }
             else if(topPos > parseInt(verticalBoundary[4].offsetTop) && topPos < parseInt(verticalBoundary[4].offsetTop) + 100)
             {
-                if(leftPos < parseInt(verticalBoundary[4].offsetLeft)-60 && leftPos > parseInt(verticalBoundary[2].offsetLeft))
+                if(leftPos < parseInt(verticalBoundary[4].offsetLeft)-60 && leftPos > parseInt(verticalBoundary[2].offsetLeft)+30)
                 {
                     console.log("gg");
                     leftPos = leftPos + speed;
@@ -97,7 +97,6 @@ window.addEventListener("keydown", function(event){
         pacman.style.transform = "rotate(-90deg)";
         if(leftPos > parseInt(horizontalBoundary[2].offsetLeft) && leftPos < parseInt(horizontalBoundary[2].offsetLeft+680))
         {
-            console.log("beh");
             if(leftPos > parseInt(horizontalBoundary[4].offsetLeft) && leftPos < parseInt(horizontalBoundary[4].offsetLeft+300))
             {
                 if(topPos > parseInt(horizontalBoundary[4].offsetTop))
@@ -108,7 +107,7 @@ window.addEventListener("keydown", function(event){
             }
             if(leftPos > parseInt(horizontalBoundary[6].offsetLeft)-60 && leftPos < parseInt(horizontalBoundary[6].offsetLeft+200))
             {
-                if(topPos < parseInt(horizontalBoundary[6].offsetTop)+30)
+                if(topPos < parseInt(horizontalBoundary[6].offsetTop)+30 && topPos > parseInt(horizontalBoundary[2].offsetTop)+30)
                 {
                     topPos = topPos + speed;
                     pacman.style.top = topPos + "px";
@@ -116,7 +115,7 @@ window.addEventListener("keydown", function(event){
             }
             if(leftPos > parseInt(horizontalBoundary[7].offsetLeft) && leftPos < parseInt(horizontalBoundary[7].offsetLeft+200))
             {
-                if(topPos < parseInt(horizontalBoundary[7].offsetTop)+30)
+                if(topPos < parseInt(horizontalBoundary[7].offsetTop)+30 && topPos > parseInt(horizontalBoundary[2].offsetTop)+30)
                 {
                     topPos = topPos + speed;
                     pacman.style.top = topPos + "px";
