@@ -11,6 +11,15 @@
 <body>
 <!--Game Window-->
     <div class="block">
+        <audio id="gameStart">
+            <source src="./sounds/game_start.wav" type="audio/wav">
+        </audio>
+        <audio id="gameWon">
+            <source src="./sounds/pill.wav" type="audio/wav">
+        </audio>
+        <audio id="death">
+            <source src="./sounds/death.wav" type="audio/wav">
+        </audio>
         <div id="pacman"></div>
         <div id="maze">
             <div class="vertical-line">       <!--00000000 vertical boundary left-->
@@ -125,6 +134,11 @@
     </div>
     
 <!--Scripts-->
+    <script>
+    window.onload = function() {
+        document.getElementById("gameStart").play();
+    }
+    </script>
     <script src="./script/movement.js"></script>
     <script src="./script/Score.js"></script>
     <script src="./script/ghosts.js"></script>
