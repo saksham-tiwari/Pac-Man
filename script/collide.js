@@ -8,19 +8,19 @@ setTimeout(()=>{
 
         if(variable){
             if(collide(div1,div2)){
-                alert("game over");
+                alert("GAME OVER! :(");
                 alert = function(){};
                 location.reload();
             } else if(collide(div1,div3)){
-                alert("game over");
+                alert("GAME OVER! :(");
                 alert = function(){};
                 location.reload();
             } else if(collide(div1,div4)){
-                alert("game over");
+                alert("GAME OVER! :(");
                 alert = function(){};
                 location.reload();
             } else if(collide(div1,div5)){
-                alert("game over");
+                alert("GAME OVER! :(");
                 alert = function(){};
                 location.reload();
             }
