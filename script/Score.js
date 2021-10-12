@@ -202,7 +202,9 @@ function checkScore()
     }
     if(q === true)
     {
-        alert("CONGRATULATIONS!!!!!!!!");
+        document.getElementsById("gameWon").play();
+        setTimeout(function(){
+        alert("CONGRATULATIONS!!!!!!!!");}, t);
         speedG = speedG*5;
         location.reload();
     }

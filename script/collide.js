@@ -6,23 +6,33 @@ setTimeout(()=>{
         let div4 = document.querySelector(".pinky").getBoundingClientRect();
         let div5 = document.querySelector(".clyde").getBoundingClientRect();
 
+        let t = 350;
+
         if(variable){
             if(collide(div1,div2)){
-                alert("GAME OVER! :(");
-                alert = function(){};
-                location.reload();
+                document.getElementById("death").play();
+                setTimeout(function(){
+                    alert("GAME OVER! :(");
+                    alert = function(){};
+                    location.reload();}, t);
             } else if(collide(div1,div3)){
-                alert("GAME OVER! :(");
-                alert = function(){};
-                location.reload();
+                document.getElementById("death").play();
+                setTimeout(function(){
+                    alert("GAME OVER! :(");
+                    alert = function(){};
+                    location.reload();}, t);
             } else if(collide(div1,div4)){
-                alert("GAME OVER! :(");
-                alert = function(){};
-                location.reload();
+                document.getElementById("death").play();
+                setTimeout(function(){
+                    alert("GAME OVER! :(");
+                    alert = function(){};
+                    location.reload();}, t);
             } else if(collide(div1,div5)){
-                alert("GAME OVER! :(");
-                alert = function(){};
-                location.reload();
+                document.getElementById("death").play();
+                setTimeout(function(){
+                    alert("GAME OVER! :(");
+                    alert = function(){};
+                    location.reload();}, t);
             }
     }
 },10)
