@@ -13,7 +13,7 @@ var q = false;
 // console.log(points.length);
 scoreUI.innerHTML = Score;
 
-for(let x=0; x<100;x++) {
+for(let x=0; x<60;x++) {
     if(orbLeft < parseInt(verticalBoundary[1].offsetLeft) - 90 && orbTop === parseInt(horizontalBoundary[0].offsetTop) + 30)
     {
         var orb = document.createElement('div');
@@ -60,7 +60,7 @@ for(let x=0; x<100;x++) {
 
 orbLeft = parseInt(verticalBoundary[2].offsetLeft) + 30;
 orbTop = parseInt(horizontalBoundary[0].offsetTop) + 80;
-for(x=0;x<100;x++)
+for(x=0;x<20;x++)
 {
     if(orbTop < parseInt(horizontalBoundary[1].offsetTop) - 90)
     {
@@ -77,7 +77,7 @@ for(x=0;x<100;x++)
 
 orbLeft = parseInt(verticalBoundary[3].offsetLeft) - 60;
 orbTop = parseInt(horizontalBoundary[0].offsetTop) + 80;
-for(x=0;x<100;x++)
+for(x=0;x<20;x++)
 {
     if(orbTop < parseInt(horizontalBoundary[1].offsetTop) - 90)
     {
@@ -94,7 +94,7 @@ for(x=0;x<100;x++)
 
 orbLeft = parseInt(verticalBoundary[2].offsetLeft) + 80;
 orbTop = parseInt(horizontalBoundary[2].offsetTop) + 30;
-for(x=0;x<100;x++)
+for(x=0;x<20;x++)
 {
     if(orbLeft < parseInt(verticalBoundary[3].offsetLeft) - 90)
     {
@@ -111,7 +111,7 @@ for(x=0;x<100;x++)
 
 orbLeft = parseInt(verticalBoundary[2].offsetLeft) + 80;
 orbTop = parseInt(horizontalBoundary[3].offsetTop) - 60;
-for(x=0;x<100;x++)
+for(x=0;x<20;x++)
 {
     if(orbLeft < parseInt(verticalBoundary[3].offsetLeft) - 90)
     {
@@ -129,7 +129,7 @@ for(x=0;x<100;x++)
 
 orbLeft = parseInt(verticalBoundary[6].offsetLeft) + 75;
 orbTop = parseInt(horizontalBoundary[6].offsetTop) + 30;
-for(x=0;x<100;x++)
+for(x=0;x<20;x++)
 {
     if(orbTop < parseInt(horizontalBoundary[3].offsetTop) - 90)
     {
@@ -146,7 +146,7 @@ for(x=0;x<100;x++)
 
 orbLeft = parseInt(verticalBoundary[7].offsetLeft) - 75;
 orbTop = parseInt(horizontalBoundary[6].offsetTop) + 30;
-for(x=0;x<100;x++)
+for(x=0;x<20;x++)
 {
     if(orbTop < parseInt(horizontalBoundary[3].offsetTop) - 90)
     {
@@ -162,6 +162,7 @@ for(x=0;x<100;x++)
 }
 
 let points = document.querySelectorAll('.points')
+console.log(points.length);
 
 let s = setInterval(checkScore, 1);
 function checkScore()
@@ -194,14 +195,18 @@ function checkScore()
             }
             scoreUI.innerHTML = Score;
         }
-        if(Score === 150)
+        if(points.length === 0)
         {
             clearInterval(s);
             q = true;
         }
     }
     if(q === true)
-    alert("WON");
+    {
+        alert("CONGRATULATIONS!!!!!!!!");
+        speedG = speedG*5;
+        location.reload();
+    }
 }
 
 function powerOrb(){

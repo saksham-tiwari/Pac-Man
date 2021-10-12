@@ -15,10 +15,9 @@ body{
 /*-------Game Window-------*/
 
 .block{
-    margin: 3% 0 auto 7%;
+    margin: 3% 0 auto 5%;
     width: 70vw;
     height: 85vh;
-    box-shadow: 1px 10px 50px rgba(0, 0, 0, 0.5);
     background-image: url(../img/Background.png);
     background-position: center;
     background-size: cover;
@@ -55,7 +54,12 @@ body{
     background-size: cover;
 }
 .power{
-    width: 50px;
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
 }
 .scared{
     opacity: 0.3;
@@ -122,23 +126,59 @@ body{
     width: 20vw;
     margin: 3% auto auto 0;
     /* display: inline-block; */
+    background-image: url(../img/Background.png);
+    background-position: center;
+    background-size: cover;
+    padding-right: 3%;
+    padding-left: 1%;
+}
+
+#logo{
+    margin-top: 45%;
+    background: url(../img/Pac-Man-Logo.png);
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 2%;
 }
 
 #scoreUI h1{
-    color: #132527;
-    margin-top: 70%;
+    margin-top: 14%;
+    color: #fcc73e;
     text-align: center;
+    margin-left: 5%;
+    text-shadow: 2px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
 #score{
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    margin-top: 10px;
+    margin-top: 15px;
     background-color: #fff;
     height: 50px;
     width: 150px;
-    margin-left: 25%;
+    margin-left: 22.5%;
     text-align: center;
     color: #642B73;
     font-size: x-large;
     padding-top: 11px;
+}
+
+#scoreUI button{
+    margin:  17% auto auto 30%;
+    padding: 10px 30px;
+    font-size: large;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #642B73;
+    transition-duration: 0.3s;
+}
+
+#scoreUI button:hover{
+    background-color: #fcc73e;
+    color: #fff;
 }

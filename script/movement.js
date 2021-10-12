@@ -147,7 +147,7 @@ window.addEventListener("keydown", function(event){
         {
             if(leftPos > parseInt(horizontalBoundary[5].offsetLeft) && leftPos < parseInt(horizontalBoundary[5].offsetLeft+300))
             {
-                if(topPos < parseInt(horizontalBoundary[5].offsetTop)-60)
+                if(topPos < parseInt(horizontalBoundary[5].offsetTop)-60 && topPos > parseInt(horizontalBoundary[2].offsetTop))
                 {
                     topPos = topPos + speed;
                     pacman.style.top = topPos + "px";
