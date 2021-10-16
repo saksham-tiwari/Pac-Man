@@ -1,3 +1,7 @@
+html{
+    overflow-anchor: none;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -10,21 +14,21 @@ body{
     background-size: cover;
     overflow: hidden;
     display: flex;
+    height: 100vh;
 }
 
 /*-------Game Window-------*/
 
 .block{
-    margin: 3% 0 auto 5%;
-    width: 70vw;
-    height: 85vh;
+    margin: 7.5vh 0 auto auto;
+    width: 75%;
+    height: 85%;
     background-image: url(../img/Background.png);
     background-position: center;
     background-size: cover;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* display: inline-block; */
-    margin-bottom: 500px;
 }
 
 #pacman{
@@ -67,26 +71,28 @@ body{
 
 .vertical-line{
     z-index: 1;
+    height: 100%;
     position: absolute;
 }
 
 .verticals{
-    background: url(../img/Platforms/Platform_Vertical_Pink.png);
-    height: 100px;
+    background: url(../img/Platforms/Platform_Vertical_Pink.png) no-repeat;
+    height: 16.66%;
     width: 30px;
     background-size: contain;
 }
 
 .horizontal-line{
+    width: 98%;
     z-index: 1;
     position: absolute;
     display: flex;
 }
 
 .horizontal{
-    background: url(../img/Platforms/Platform_Pink_Wide.png);
-    width: 100px;
-    height: 20px;
+    background: url(../img/Platforms/Platform_Pink_Wide.png) no-repeat;
+    width: 10.5%;
+    height: 30px;
     background-size: contain;
 }
 .ghost{
@@ -124,7 +130,7 @@ body{
 #scoreUI{
     height: 85vh;
     width: 20vw;
-    margin: 3% auto auto 0;
+    margin: 7.5vh auto auto 0;
     /* display: inline-block; */
     background-image: url(../img/Background.png);
     background-position: center;

@@ -1,60 +1,61 @@
 let j=-1;
 let removeOrb = false;
 var Score = 0;
-let orbLeft = parseInt(verticalBoundary[0].offsetLeft) + 40;
+let orbLeft = parseInt(verticalBoundary[0].offsetLeft) - 10;
 let orbTop = parseInt(verticalBoundary[0].offsetTop) + 30;
 const scoreUI = document.getElementById('score');
 var q = false;
 
-// console.log(points[0].offsetLeft);
+console.log(verticalBoundary[1].offsetLeft);
 // console.log(points[0].offsetTop);
 // console.log(pacman.offsetLeft);
 // console.log(pacman.offsetTop);
 // console.log(points.length);
 scoreUI.innerHTML = Score;
 
-for(let x=0; x<60;x++) {
+for(let x=0; x<102;x++) {
+    console.log(orbLeft);
     if(orbLeft < parseInt(verticalBoundary[1].offsetLeft) - 90 && orbTop === parseInt(horizontalBoundary[0].offsetTop) + 30)
     {
-        var orb = document.createElement('div');
-        console.log("yeeet 1");
-        orb.className = "points";
-        orb.style.left = orbLeft + "px";
-        orb.style.top = orbTop + "px";
         orbLeft = orbLeft + 50;
-        document.getElementById('orbs').appendChild(orb);
-    }
-    else if(orbLeft > parseInt(verticalBoundary[1].offsetLeft) - 60 && orbTop < parseInt(horizontalBoundary[1].offsetTop) - 90)
-    {
         var orb = document.createElement('div');
         console.log("yeeet 1");
         orb.className = "points";
         orb.style.left = orbLeft + "px";
         orb.style.top = orbTop + "px";
+        document.getElementById('orbs').appendChild(orb);
+    }
+    else if(orbLeft >= parseInt(verticalBoundary[1].offsetLeft) - 90 && orbTop < parseInt(horizontalBoundary[1].offsetTop) - 90)
+    {
         orbTop = orbTop + 50;
-        document.getElementById('orbs').appendChild(orb);
-    }
-    else if(orbLeft > parseInt(verticalBoundary[0].offsetLeft) + 50 && orbTop > parseInt(horizontalBoundary[1].offsetTop) - 90)
-    {
         var orb = document.createElement('div');
         console.log("yeeet 1");
         orb.className = "points";
         orb.style.left = orbLeft + "px";
         orb.style.top = orbTop + "px";
+        document.getElementById('orbs').appendChild(orb);
+    }
+    else if(orbLeft > parseInt(verticalBoundary[0].offsetLeft) + 40 && orbTop > parseInt(horizontalBoundary[1].offsetTop) - 90)
+    {
         orbLeft = orbLeft - 50;
-        document.getElementById('orbs').appendChild(orb);
-    }
-    else if(orbLeft < parseInt(verticalBoundary[1].offsetLeft) - 90 && orbTop > parseInt(horizontalBoundary[0].offsetTop) + 60)
-    {
         var orb = document.createElement('div');
         console.log("yeeet 1");
         orb.className = "points";
         orb.style.left = orbLeft + "px";
         orb.style.top = orbTop + "px";
-        orbTop = orbTop - 50;
         document.getElementById('orbs').appendChild(orb);
     }
-    else
+    else if(orbLeft - 10 < parseInt(verticalBoundary[1].offsetLeft) - 60 && orbTop > parseInt(horizontalBoundary[0].offsetTop) + 60)
+    {
+        orbTop = orbTop - 50;
+        var orb = document.createElement('div');
+        console.log("yeeet 1");
+        orb.className = "points";
+        orb.style.left = orbLeft + "px";
+        orb.style.top = orbTop + "px";
+        document.getElementById('orbs').appendChild(orb);
+    }
+    if(orbLeft === parseInt(verticalBoundary[0].offsetLeft) - 10 && orbTop === parseInt(verticalBoundary[0].offsetTop) + 30)
         break;
 }
 

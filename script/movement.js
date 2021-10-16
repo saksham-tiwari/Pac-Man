@@ -13,7 +13,7 @@ window.addEventListener("keydown", function(event){
     if(event.key == "d")
     {
         pacman.style.transform = "rotate(0deg)";
-        if(topPos > parseInt(verticalBoundary[2].offsetTop) && topPos < parseInt(verticalBoundary[2].offsetTop) + 300)
+        if(topPos > parseInt(verticalBoundary[3].offsetTop) && topPos < parseInt(verticalBoundary[3].offsetTop) + 300)
         {
             if(topPos > parseInt(verticalBoundary[6].offsetTop) && topPos < parseInt(verticalBoundary[6].offsetTop) + 100)
             {

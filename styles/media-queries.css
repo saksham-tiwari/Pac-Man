@@ -1,0 +1,13 @@
+@media (max-width: 1024px) {
+    #pacman{
+        height: 34.2px;
+        width: 32px;
+    }    
+    .ghost{
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        top: 40%;
+    }
+    
+}
